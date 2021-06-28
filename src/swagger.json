@@ -1,0 +1,47 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Pipedrive Bling Integration Documentation",
+    "description": "This is an API Rest",
+    "version": "1.0.0",
+    "contact": {
+      "email": "antonio@hotmail.com"
+    }
+  },
+  "paths": {
+    "/integration": {
+      "post": {
+        "tags": [
+          "Integration"
+        ],
+        "summary": "Create orders on bling",
+        "description": "Create orders on bling",
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      }
+    },
+    "/reports": {
+      "get": {
+        "tags": [
+          "Report"
+        ],
+        "summary": "List all reports",
+        "description": "List all reports",
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      }
+    }
+  }
+}
