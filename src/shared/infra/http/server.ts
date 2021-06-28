@@ -9,7 +9,7 @@ import createConnection from '../typeorm';
 import routes from './routes';
 import '../../container';
 
-createConnection();
+createConnection('database_pipedrive_bling_integration');
 const app = express();
 
 app.use(express.json());

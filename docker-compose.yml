@@ -1,0 +1,22 @@
+version: "3.9"
+
+services:
+  database_pipedrive_bling_integration:
+    image: mongo
+    container_name: database_pipedrive_bling_integration
+    restart: always
+    ports:
+      - 27017:27017
+  app:
+    build: .
+    container_name: pipedrive_bling_integration
+    restart: always
+    ports:
+      - 3333:3333
+      - 9229:9229
+    volumes:
+      - .:/usr/app
+    links:
+      - database_pipedrive_bling_integration
+    depends_on:
+      - database_pipedrive_bling_integration
